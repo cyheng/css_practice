@@ -1,0 +1,20 @@
+<template>
+    <div >
+      <h1>test</h1>
+    </div>
+</template>
+
+<script>
+export default {
+  name: 'test',
+  data(){
+    return {
+
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+
+</style>
