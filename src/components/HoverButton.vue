@@ -53,8 +53,8 @@ export default {
    }
   //  爱心
    &::after{
-     font-family: 'Ionicons';
-     content: '\f141';
+     font-family: "iconfont";
+     content: '\e633';
      font-size: 40px;
      color: red;
      position: absolute;

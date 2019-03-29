@@ -4,9 +4,9 @@
       <div class="image-content">
         <h1>image Title</h1>
         <div class="icons">
-          <a href="#" class="icon fas fa-heart"></a>
-          <a href="#" class="icon fas fa-comment"></a>
-          <a href="#" class="icon fas fa-share"></a>
+          <a href="#" class="icon iconfont icon-heart"></a>
+          <a href="#" class="icon  iconfont icon-comment"></a>
+          <a href="#" class="icon  iconfont icon-share"></a>
         </div>
       </div>
     </div>
@@ -72,6 +72,7 @@ export default {
     font-size: 22px;
     margin:0 10px;
     transform: translateY(80px);
+    display: inline-block;
     &:nth-child(1){
       transition: transform 0.4s 0.05s,color 0.4s;
     }
