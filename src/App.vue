@@ -8,16 +8,13 @@
 </template>
 
 <script>
-import HoverButton from './components/HoverButton.vue'
-import test from './components/test.vue'
+const components = require.context('./components/', false, /\.vue/)
+const items = components.keys().map(x => components(x)).map(x=>x.default)
 export default {
   name: 'app',
-  components: {
-    HoverButton,test
-  },
   data(){
     return {
-      cntList:[HoverButton,test],
+      cntList:items,
       cur:0
     }
   },
@@ -29,7 +26,8 @@ export default {
   computed:{
     currentCnt(){
       return this.cntList[this.cur]
-    }
+    },
+     
   }
 }
 </script>
@@ -39,6 +37,12 @@ body{
   margin: 0;
   padding: 0;
   background: #f1f1f1;
+}
+.middle{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .next{
   margin: 15px;

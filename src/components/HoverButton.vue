@@ -1,5 +1,6 @@
 <template>
-    <div id="btn">
+    <div class="hover-btn" :style="size">
+      <div class="btn-content">{{content}}</div>
     </div>
 </template>
 
@@ -8,7 +9,11 @@ export default {
   name: 'HoverButton',
   data(){
     return {
-
+        content:'Hover me',
+        size:{
+           width:'200px',
+           height:'60px'
+        }
     }
   }
 }
@@ -16,7 +21,7 @@ export default {
 
 <style scoped lang="scss">
  
- #btn{
+ .hover-btn{
    width: 200px;
    height: 60px;
    position: absolute;
@@ -27,18 +32,19 @@ export default {
    cursor: pointer;
    border-radius: 5px;
    overflow: hidden;
-   &:hover::before{
-     top:-30px;
+   &:hover{
+     .btn-content{
+        top:-50%;
+     }
    }
     &:hover::after{
      top:50%;
    }
   //  文字
-   &::before{
+   .btn-content{
      color:white;
      font-family: sans-serif;
      font-size: 20px;
-     content: 'Hover me';
      position: absolute;
      top:50%;
      left: 50%;
